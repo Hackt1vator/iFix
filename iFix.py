@@ -52,15 +52,16 @@ def show_popup():
     popup.geometry("+{}+{}".format(position_right, position_down))
 
     # create larger buttons
-    button1 = tk.Button(popup, text="build ramdisk", command=build_ramdisk, width=20, height=5)
+    button1 = tk.Button(popup, text="build fake fs", command=build_fakefs, width=20, height=5)
     button1.pack(pady=10)
 
-    button2 = tk.Button(popup, text="boot ramdisk", command=boot_ramdisk, width=20, height=5)
+    button2 = tk.Button(popup, text="boot fake fs", command=boot_fakefs, width=20, height=5)
     button1.pack(pady=10)
     button2.pack()
     
+    
 
-def build_ramdisk():
+def build_fakefs():
     messagebox.showinfo("", "Please put the device into dfu")
     # Display a message box with a yes/no option
     response = messagebox.askyesno("iphone?", "Do you have a A9 device?")
@@ -84,9 +85,9 @@ def build_ramdisk():
         os.system("./palera1n-macos-universal -cf")
     if response == 0:  # No
         os.system("./palera1n-macos-universal -cf")
-    messagebox.showinfo("", "After the device boots you can boot the ramdisk")
+    messagebox.showinfo("", "After the device boots you can boot the fake fs")
     
-def boot_ramdisk():
+def boot_fakefs():
     messagebox.showinfo("", "Please put the device into dfu")
     # Display a message box with a yes/no option
     response = messagebox.askyesno("iphone?", "Do you have a A9 device?")
@@ -111,6 +112,7 @@ def boot_ramdisk():
     if response == 0:  # No
         os.system("./palera1n-macos-universal -f")
     messagebox.showinfo("", "Now start the bypass")
+
 
 
 
