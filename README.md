@@ -3,7 +3,7 @@
     <p>mdm bypass for ios 12-16 on macos</p>
 
 
-![alt text](https://github.com/Laurin226/iFix_bypass/blob/main/demoing.png)
+![alt text](https://github.com/Laurin226/iFix/blob/main/demoing.png)
 
 </h1>
 <p align="center">
