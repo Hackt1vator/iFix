@@ -43,7 +43,7 @@
 <h3 align"center">Run sudo xattr -rd com.apple.quarantine ./*
 <h3 align"center">Run sudo xattr -d com.apple.quarantine ./*
 <h3 align"center">Run sudo chmod 755 ./*
-<h3 align"center">Now cd the palera1n and device/Darwin folder inside the iFix folder and run the last 3 commands above again
+<h3 align"center">Now cd the device folder inside the iFix folder and run the last 3 commands above again
 <h3 align"center">cd the iFix directory again
 <h3 align"center">Last to launch the app, run this in terminal:
 python3 iFix.py
