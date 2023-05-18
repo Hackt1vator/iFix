@@ -47,7 +47,6 @@
 <h3 align"center">cd the iFix directory again
 <h3 align"center">Last to launch the app, run this in terminal:
 python3 iFix.py
-<h3 align"center">Press: start bypass
 
 
 
