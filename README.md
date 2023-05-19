@@ -1,6 +1,6 @@
 # iFix
 <h1 align="center">
-    <p>mdm bypass for ios 12-16 on macos for non wiped devices</p>
+    <p>mdm bypass for ios 12-16 on macos for non wiped devices(if you are on Linux use the Linux branche</p>
 
 
 ![alt text](https://github.com/Hackt1vator/iFix/blob/main/demoing.png)
