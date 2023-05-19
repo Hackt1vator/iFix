@@ -133,13 +133,27 @@ def showDFUMessage():
     
 
 def enterRecMode():
+
+    os.system("./ideviceinfo > ./lastdevice.txt")
+    time.sleep(2)
+
+    f = open("./lastdevice.txt", "r")
+    fileData = f.read()
+    f.close()
+    # Find the UDID
+    start = 'UniqueDeviceID: '
+    end = 'UseRaptorCerts:'
+    s = str(fileData)
+
+    foundData = s[s.find(start) + len(start):s.rfind(end)]
+    UDID = str(foundData)
+    LAST_CONNECTED_UDID = str(UDID)
     print("Kicking device into recovery mode...")
-    os.system(f"./device/ideviceenterrecovery")
+    os.system(f"./device/ideviceenterrecovery {LAST_CONNECTED_UDID}")
 
 def exitRecMode():
-    print("Kicking device out of recovery mode...")
-    os.system(f"./device/irecovery -n")
-    messagebox.showinfo("Sent command!","Kicked device out of recovery mode!\n\n")
+    print("Kicking device out recovery mode...")
+    os.system("./device/irecovery -n")
 
 
 
@@ -216,7 +230,7 @@ def mdmbypass():
         else:
             print("Couldn't find your device")
             messagebox.showinfo("no device found", "Try disconnecting and reconnecting your device.")
-
+            return
         showinfo("", "We will now bypass your device. Be sure to jailbreak your device first with palera1n or checkra1n")
         print("Starting bypass...")
         os.system("bash ./mdm.sh")
