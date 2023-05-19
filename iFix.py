@@ -27,6 +27,8 @@ script_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_path)
 
 
+
+
 # frame settings
 root = tk.Tk()
 frame = tk.Frame(root, width="500", height="250")
@@ -69,7 +71,7 @@ def build_fakefs():
     # Check the user's response and execute the appropriate command
     if response == 1:  # Yes
         # Run the command in a subprocess
-        process = subprocess.Popen(["./palera1n-macos-universal", "-cf"], preexec_fn=os.setsid)
+        process = subprocess.Popen(["./palera1n-linux-x86_64", "-cf"], preexec_fn=os.setsid)
 
         # Wait for 8 seconds or until the process completes
         for i in range(20):
@@ -82,9 +84,9 @@ def build_fakefs():
             os.killpg(os.getpgid(process.pid), signal.SIGTERM)
 
 
-        os.system("./palera1n-macos-universal -cf")
+        os.system("./palera1n-linux-x86_64 -cf")
     if response == 0:  # No
-        os.system("./palera1n-macos-universal -cf")
+        os.system("./palera1n-linux-x86_64 -cf")
     messagebox.showinfo("", "After the device boots you can boot the fake fs")
     
 def boot_fakefs():
@@ -95,7 +97,7 @@ def boot_fakefs():
     # Check the user's response and execute the appropriate command
     if response == 1:  # Yes
         # Run the command in a subprocess
-        process = subprocess.Popen(["./palera1n-macos-universal", "-f"], preexec_fn=os.setsid)
+        process = subprocess.Popen(["./palera1n-linux-x86_64", "-f"], preexec_fn=os.setsid)
 
         # Wait for 8 seconds or until the process completes
         for i in range(20):
@@ -108,9 +110,9 @@ def boot_fakefs():
             os.killpg(os.getpgid(process.pid), signal.SIGTERM)
 
 
-        os.system("./palera1n-macos-universal -f")
+        os.system("./palera1n-linux-x86_64 -f")
     if response == 0:  # No
-        os.system("./palera1n-macos-universal -f")
+        os.system("./palera1n-linux-x86_64 -f")
     messagebox.showinfo("", "Now start the bypass")
 
 
@@ -121,7 +123,7 @@ def startcheckra1n():
 
 
 
-    os.system("open ./checkra1n.app")
+    os.system("./checkra1n")
 
 
 
@@ -131,27 +133,13 @@ def showDFUMessage():
     
 
 def enterRecMode():
-
-    os.system("./device/ideviceinfo > ./device/lastdevice.txt")
-    time.sleep(2)
-
-    f = open("./device/lastdevice.txt", "r")
-    fileData = f.read()
-    f.close()
-    # Find the UDID
-    start = 'UniqueDeviceID: '
-    end = 'UseRaptorCerts:'
-    s = str(fileData)
-
-    foundData = s[s.find(start) + len(start):s.rfind(end)]
-    UDID = str(foundData)
-    LAST_CONNECTED_UDID = str(UDID)
     print("Kicking device into recovery mode...")
-    os.system(f"./device/ideviceenterrecovery {LAST_CONNECTED_UDID}")
+    os.system(f"./device/ideviceenterrecovery")
 
 def exitRecMode():
-    print("Kicking device out recovery mode...")
-    os.system("./device/irecovery -n")
+    print("Kicking device out of recovery mode...")
+    os.system(f"./device/irecovery -n")
+    messagebox.showinfo("Sent command!","Kicked device out of recovery mode!\n\n")
 
 
 
@@ -171,27 +159,29 @@ def opentwitter():
     
 def mdmbypass():
     global LAST_CONNECTED_UDID, LAST_CONNECTED_IOS_VER
-
-    # Step 1: Detect connected device
+    # step 1 technically
     print("Searching for connected device...")
     os.system("idevicepair unpair")
     os.system("idevicepair pair")
-    os.system("./device/ideviceinfo > ./device/lastdevice.txt")
+    os.system("ideviceinfo > lastdevice.txt")
+
+
     time.sleep(2)
 
-    f = open("./device/lastdevice.txt", "r")
+
+    f = open("lastdevice.txt", "r")
     fileData = f.read()
     f.close()
 
-    if "ERROR:" in fileData:
-        # No device was detected, so retry user!
+    if ("ERROR:" in fileData):
+        # no device was detected, so retry user!
         print("ERROR: No device found!")
-        messagebox.showinfo("No device detected! 0x404","Try disconnecting and reconnecting your device.")
-        return  # stop function execution here
-    else:
-        # We definitely have something connected...
 
-        # Find the UDID
+        messagebox.showinfo("No device detected! 0x404", "Try disconnecting and reconnecting your device.")
+    else:
+        # we definitely have something connected...
+
+        # find the UDID
         start = 'UniqueDeviceID: '
         end = 'UseRaptorCerts:'
         s = str(fileData)
@@ -199,22 +189,34 @@ def mdmbypass():
         foundData = s[s.find(start) + len(start):s.rfind(end)]
         UDID = str(foundData)
         LAST_CONNECTED_UDID = str(UDID)
-        
-        
-        
 
+        # find the iOS
+        # we definitely have something connected...
+        start2 = 'ProductVersion: '
+        end2 = 'ProductionSOC:'
+        s2 = str(fileData)
 
-        if len(UDID) > 38:
-            # Stop automatic detection
+        foundData2 = s2[s.find(start2) + len(start2):s2.rfind(end2)]
+        deviceIOS = str(foundData2)
+        LAST_CONNECTED_IOS_VER = str(deviceIOS)
+
+        if (len(UDID) > 38):
+            # stop automatic detection
             timerStatus = 0
 
+            print("Found UDID: " + LAST_CONNECTED_UDID)
+            messagebox.showinfo("iDevice is detected!", "Found iDevice on iOS " + LAST_CONNECTED_IOS_VER)
+        #            cbeginExploit10["state"] = "normal"
+        #            cbeginExploit2["state"] = "normal"
 
-                
+        # messagebox.showinfo("Ready to begin!","We are ready to start jailbreak!")
+
+        # cbeginExploit10["state"] = "normal"
+
         else:
             print("Couldn't find your device")
-            messagebox.showinfo("","No device connected")
-            return  # stop function execution here
-            
+            messagebox.showinfo("no device found", "Try disconnecting and reconnecting your device.")
+
         showinfo("", "We will now bypass your device. Be sure to jailbreak your device first with palera1n or checkra1n")
         print("Starting bypass...")
         os.system("bash ./mdm.sh")
@@ -293,4 +295,5 @@ root.eval('tk::PlaceWindow . center')
 
 
 root.mainloop()
+
 
