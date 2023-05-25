@@ -1,6 +1,6 @@
-# installing
+# Installation
 
-<h3 align"center">install here the Dependencies of Silver, it should work for iFix also: https://www.appletech752.com/dependencies.sh
+<h3 align"center">Install this: [Silver Dependecies](https://www.appletech752.com/dependencies.sh)
 <h3 align"center">Run bash (drag and drop here the file)
 <h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center">download the iFix dmg file from the releases
 <h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center">drag and drop the iFix.app to the application folder
