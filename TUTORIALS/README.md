@@ -1,2 +1,5 @@
-select a tutorial
-[Normal](/TUTORIALS/Normal.md)
+# Select a tutorial
+</br>
+[Normal](/TUTORIALS/normal.md)
+</br>
+[Python](/TUTORIALS/python.md)
