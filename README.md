@@ -17,7 +17,7 @@ PP bypass (real)
 <h3 align="center">On A11 and A10 device,s don't set a password after bypass</h3>
 <h3 align="center">Palera1nLoader IPA file <strong><a href="https://nightly.link/palera1n/loader/workflows/build/main/palera1n.zip">Palera1n.ipa</a></strong></h3>
 <h3 align="center">so btw, I am not fucking responsible if you get fucked by your teacher and your mom. this is for educational purposes.</h3>
-<h3 align="center">Donate to me?: <strong><a href="https://www.buymeacoffee.com/Hacktivator">buymeacoffee</a></strong></h3>
+<h3 align="center"><a href="https://www.buymeacoffee.com/Hacktivator" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a></h3>
 <h3 align="center">How does it work? It boots the device with multiple patches required. On first run, it'll boot a ramdisk which dumps your onboard blob, creates a fakefs (if using semi tethered), installs the loader app, and patches your kernel. </h3>
 
 
