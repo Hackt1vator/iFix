@@ -1,5 +1,5 @@
 # Select a tutorial
-</br>
-[Normal](/TUTORIALS/normal.md)
-</br>
-[Python](/TUTORIALS/python.md)
+<br>
+https://github.com/TUTORIALS/normal.md
+<br>
+https://github.com/TUTORIALS/python.md
