@@ -1,2 +1,2 @@
 select a tutorial
-[Normal](/TUTORIALS/Normal)
+[Normal](/TUTORIALS/Normal.md)
