@@ -25,6 +25,8 @@ PP bypass (real)
 
 # Credits
 
+- [Patheticlol](https://github.com/Patheticlol)
+: [pull request](https://github.com/Hackt1vator/iFix/pull/1)
 
 Original palera1n credits:
 - [Nathan](https://github.com/verygenericname)
