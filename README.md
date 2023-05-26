@@ -1,9 +1,9 @@
 # iFix
 <h1 align="center">
-    <p>mdm bypass for ios 12-16 on macos for non wiped devices(if you are on Linux use the Linux branch</p>
+PP bypass (real)
+    </h1>
 
-
-![alt text](https://github.com/Hackt1vator/iFix/blob/main/demoing.png)
+![fix this bitch](https://github.com/Hackt1vator/iFix/blob/main/demoing.png)
 
 </h1>
 <p align="center">
@@ -11,48 +11,14 @@
     •
     <strong><a href="https://twitter.com/hackt1vator">Twitter</a></strong>
     •
-    <strong><a   href="https://hackt1vator.github.io">Website</a></strong>
-<h3 align="center">On A11 and A10 devices don´t set a passcode after bypass</h3>
-<h3 align="center">Here you can download the Palera1n loader ipa: <strong><a href="https://nightly.link/palera1n/loader/workflows/build/main/palera1n.zip">Palera1n.ipa</a></strong></h3>
-<h3 align="center">!!!Warning! This is for educational porpuse only!!!</h3>
-<h3 align="center">Here you can donate the developer: <strong><a href="https://www.buymeacoffee.com/Hacktivator">buymeacoffee</a></strong></h3>
-<h3 align="center">How does it work: It boots the device with multiple patches required. On first run, it'll boot a ramdisk which dumps your onboard blob, creates a fakefs (if using semi tethered), installs the loader app, and patches your kernel. </h3>
-
-# installing
-
-<h3 align"center">install here the Dependencies of Silver, it should work for iFix also: https://www.appletech752.com/dependencies.sh
-<h3 align"center">Run bash (drag and drop here the file)
-<h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center">download the iFix dmg file from the releases
-<h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center">drag and drop the iFix.app to the application folder
-<h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center">Run these commands:
-<h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center">sudo xattr -r /Applications/iFix.app
-<h3 align"center"><h3 align"center"><h3 align"center"><h3 align"center">sudo xattr -rd com.apple.quarantine /Applications/iFix.app
-<h3 align"center"><h3 align"center"><h3 align"center">sudo xattr -d com.apple.quarantine /Applications/iFix.app
-<h3 align"center"><h3 align"center">sudo xattr -r com.apple.quarantine /Applications/iFix.app
-<h3 align"center">chmod 755 /Applications/iFix.app
-<h3 align"center">now open the iFix app
-<h3 align"center">new click for ios 12-14 start checkra1n and for ios 15-16 start palera1n
-<h3 align"center">When the device is jailbroken, you can click bypass ios 12-16 
-<h3 align"center">bypass done
-
-
-# install with python 3 if the steps above didn't work for you
-
-<h3 align"center">install here the Dependencies of Silver, it should work for iFix also: https://www.appletech752.com/dependencies.sh
-<h3 align"center">Run bash (drag and drop here the file)
-<h3 align"center">download iFix and unzip it
-<h3 align"center">Open a terminal window and cd to the directory that iFix was downloaded to.
-<h3 align"center">Run git init -b main
-<h3 align"center">Run sudo xattr -rd com.apple.quarantine ./*
-<h3 align"center">Run sudo xattr -d com.apple.quarantine ./*
-<h3 align"center">Run sudo chmod 755 ./*
-<h3 align"center">Now cd the device folder inside the iFix folder and run the last 3 commands above again
-<h3 align"center">cd the iFix directory again
-<h3 align"center">to launch the app, run this in terminal:
-python3 iFix.py
-<h3 align"center">new click for ios 12-14 start checkra1n and for ios 15-16 start palera1n
-<h3 align"center">When the device is jailbroken, you can click bypass ios 12-16 
-<h3 align"center">bypass done
+    <strong><a href="https://hackt1vator.github.io">Website</a></strong>
+    •
+    <strong><a href="https://github.com/Patheticlol/iShit/tree/main/TUTORIALS">Tutorial for this</a></strong>
+<h3 align="center">On A11 and A10 device,s don't set a password after bypass</h3>
+<h3 align="center">Palera1nLoader IPA file <strong><a href="https://nightly.link/palera1n/loader/workflows/build/main/palera1n.zip">Palera1n.ipa</a></strong></h3>
+<h3 align="center">so btw, I am not fucking responsible if you get fucked by your teacher and your mom. this is for educational purposes.</h3>
+<h3 align="center"><a href="https://www.buymeacoffee.com/Hacktivator" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a></h3>
+<h3 align="center">How does it work? It boots the device with multiple patches required. On first run, it'll boot a ramdisk which dumps your onboard blob, creates a fakefs (if using semi tethered), installs the loader app, and patches your kernel. </h3>
 
 
 
