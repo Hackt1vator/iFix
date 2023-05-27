@@ -248,7 +248,7 @@ frame.pack()
 
 #BIG title on program
 mainText = Label(root, text="iFix",font=('Helveticabold', 24))
-mainText.place(x=340, y=170)
+mainText.place(x=400, y=400)
 
 img2 = Image.open("iFix.jpg")
 NewIMGSize2 = img2.resize((1000,1000), Image.ANTIALIAS)
@@ -259,12 +259,12 @@ label.place(x=0, y=0)
 #label
 my_label2 = Label(frame,
                  text = "mdm Bypass")
-my_label2.place(x=300, y=230)
+my_label2.place(x=390, y=500)
 
 #label
 my_label3 = Label(frame,
                  text = "ver 1.0")
-my_label3.place(x=10, y=420)
+my_label3.place(x=10, y=700)
 
 
 
@@ -272,36 +272,31 @@ cButton1 = tk.Button(frame,
                    text="bypass ios 12-16.5",
                    command=mdmbypass,
                    state="normal")
-cButton1.place(x=270, y=360)
-cButton5 = tk.Button(frame,
-                   text="enter recovery",
-                   command=enterRecMode,
-                   state="normal")
-cButton5.place(x=10, y=10)
+cButton1.place(x=270, y=600)
 cButton6 = tk.Button(frame,
                  text="exit recovery",
                  command=exitRecMode,
                  state="normal")
-cButton6.place(x=580, y=10)
+cButton6.place(x=780, y=10)
 cButton7 = tk.Button(frame,
                    text="start checkra1n",
                    command=startcheckra1n,
                    state="normal")
-cButton7.place(x=530, y=200)
+cButton7.place(x=700, y=400)
 cButton9 = tk.Button(frame,
                    text="start palera1n",
                    command=show_popup,
                    state="normal")
-cButton9.place(x=50, y=200)
+cButton9.place(x=50, y=400)
 
 
 cbeginExploit2 = tk.Button(frame,
                    text="Twitter!",
                    command=opentwitter,
                    state="normal")
-cbeginExploit2.place(x=580, y=410)
+cbeginExploit2.place(x=850, y=700)
 
-root.geometry("700x450")
+root.geometry("1000x800")
 
 root.resizable(False, False)
 
