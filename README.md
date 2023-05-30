@@ -15,21 +15,7 @@
 </p>
 <div class="clear"></div>
 
-## If you want a jailbreak, you should read the [guide](https://palera.in).
-
-### You can obtain v2.0.0 beta [here](https://github.com/palera1n/palera1n/releases).
-If you need an older v2.0.0 beta, please get it [here](https://github.com/palera1n/palera1n/releases/tag/v2.0.0-beta.5).
-
-# Warnings
-- This palera1n rewrite has noticeably different arguments compared to the shell version of palera1n.
-  - Highly recommended that you take a look at how to use palera1n-c [here](https://cdn.nickchan.lol/palera1n/c-rewrite/releases/v2.0.0-beta.6/palera1n.1.html).
-
-- This does **NOT** support tethered creation or booting. You must use the older [shell version of palera1n](https://github.com/palera1n/palera1n/tree/legacy) (clone with `-b legacy`).
-
-- We are **NOT** responsible for any data loss, or the result of a device being bricked. The user of this program accepts responsibility should something happen to their device. While nothing should happen, jailbreaking has risks in itself.
-  - If your device is stuck in recovery, please run futurerestore `--exit-recovery`, or use `irecovery -n`.
-
-- palera1n will never work in VirtualBox, VMware or any virtual machine that doesn't support PCI passthrough.
+## If you want a jailbreak, you should read [ios.cfw.guide](https://ios.cfw.guide).
 
 # Requirements
 - A checkm8 vulnerable iOS device on iOS 15.x or 16.x (`A8` - `A11`)
