@@ -34,3 +34,4 @@
 
 
 # Credits
+<details><summary>Patheticlol</summary>README updates</details>
