@@ -1,59 +1,37 @@
-# iFix
-<h1 align="center">
-PP bypass (real)
-    </h1>
+<picture>
+	<source media="(prefers-color-scheme: light)" srcset="https://github.com/Patheticlol/iSUS/assets/83834491/af90f6b1-64c4-404e-920f-2bf89cbea60d">
+	<img align="left" height="120" src="https://github.com/Patheticlol/iSUS/assets/83834491/5faf3c6c-e5bd-4401-a952-837bc84d607d" style="float: left;"/>
+</picture>
+<h3 align="right">An iOS 12-16 work-in-progress, <br>semi-tethered Mobile Device Management bypasser that uses checkra1n and palera1n.</h3> 
 
-![fix this bitch](https://github.com/Hackt1vator/iFix/blob/main/demoing.png)
+<p align="right" >
+  <strong><a href="https://github.com/Hackt1vator/iFix/blob/main/README.md">Usage (Tutorial)</a></strong>
+  •
+  <strong><a href="https://github.com/Hackt1vator/iFix/graphs/contributors">Contributors</a></strong>
+  •
+  <strong><a href="https://twitter.com/hackt1vator">Twitter</a></strong>
+  • 
+  <strong><a href="https://hackt1vator.github.io/">Website</a></strong>
+</p>
+<div class="clear"></div>
 
-</h1>
-<p align="center">
-    <strong><a href="https://github.com/Hackt1vator/iFix/releases/">releases</a></strong>
-    •
-    <strong><a href="https://twitter.com/hackt1vator">Twitter</a></strong>
-    •
-    <strong><a href="https://hackt1vator.github.io">Website</a></strong>
-    •
-    <strong><a href="https://github.com/Patheticlol/iShit/tree/main/TUTORIALS">Tutorial for this</a></strong>
-<h3 align="center">On A11 and A10 device,s don't set a password after bypass</h3>
-<h3 align="center">Palera1nLoader IPA file <strong><a href="https://nightly.link/palera1n/loader/workflows/build/main/palera1n.zip">Palera1n.ipa</a></strong></h3>
-<h3 align="center">so btw, I am not fucking responsible if you get fucked by your teacher and your mom. this is for educational purposes.</h3>
-<h3 align="center"><a href="https://www.buymeacoffee.com/Hacktivator" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a></h3>
-<h3 align="center">How does it work? It boots the device with multiple patches required. On first run, it'll boot a ramdisk which dumps your onboard blob, creates a fakefs (if using semi tethered), installs the loader app, and patches your kernel. </h3>
+## If you want a jailbreak, you should read [ios.cfw.guide](https://ios.cfw.guide).
+#### For devices that don't fully load Github Releases for some reason, use this link to install the DMG file: https://github.com/Hackt1vator/iFix/releases/download/v.1.0/iFix.dmg
+# Requirements
+- A checkm8 vulnerable iOS device on iOS 15.x or 16.x (`A8` - `A11`)
+- Palera1n Loader IPA file, which is available at https://nightly.link/palera1n/loader/workflows/build/main/palera1n.zip
+- **USB-A** cables are recommended to use, USB-C may have issues with palera1n and getting into DFU mode.<details><summary>Technical explanation</summary>The BootROM will only enter DFU if it detects USB voltage, which boils down to checking whether a certain pin is asserted from the Tristar chip. The Tristar does this based on the cable's accessory ID, and apparently USB-A and USB-C cables have different accessory IDs, and the one of the USB-C cables makes the Tristar not assert the USB voltage pin.</details>
+- Slive dependencies, available here: https://www.appletech752.com/dependencies.sh
 
-
+### Stolen Requirements
+- A Linux or macOS computer
+	- AMD CPUs (not AMD Mobile) have an issue [with (likely) their USB controllers] that causes them to have a very low success rate with checkm8. It is not recommended that you use them with palera1n.
+		- If your device does not successfully jailbreak, try a computer with an Intel or other CPU
+    
+- Apple Silicon Macs with USB-C
+	- USB-C port on Apple Silicon Macs may require manual unplugging and replugging of the lightning cable after checkm8 exploit.
+	- This problem may be solved by connecting via USBHub.
 
 
 # Credits
-
-- [Patheticlol](https://github.com/Patheticlol)
-: [pull request](https://github.com/Hackt1vator/iFix/pull/1)
-
-Original palera1n credits:
-- [Nathan](https://github.com/verygenericname)
-    - The ramdisk that dumps blobs, installs pogo to tips app, and duplicates rootfs is a slimmed down version of [SSHRD_Script](https://github.com/verygenericname/SSHRD_Script)
-    - For modified [restored_external](https://github.com/verygenericname/sshrd_SSHRD_Script)
-    - Also helped Mineek getting the kernel up and running and with the patches
-    - Helping with adding multiple device support
-    - Fixing issues relating to camera.. etc by switching to fsboot
-    - [iBoot64Patcher fork](https://github.com/verygenericname/iBoot64Patcher)
-- [Mineek](https://github.com/mineek)
-    - For the patching and booting commands
-    - Adding tweak support
-    - For patchfinders for RELEASE kernels
-    - [Kernel15Patcher](https://github.com/mineek/PongoOS/tree/iOS15/checkra1n/Kernel15Patcher)
-    - [Kernel64Patcher](https://github.com/mineek/Kernel64Patcher)
-- [Amy](https://github.com/elihwyma) for the [Pogo](https://github.com/elihwyma/Pogo) app
-- [checkra1n](https://github.com/checkra1n) for the base of the kpf
-- [nyuszika7h](https://github.com/nyuszika7h) for the script to help get into DFU
-- [the Procursus Team](https://github.com/ProcursusTeam) for the amazing [bootstrap](https://github.com/ProcursusTeam/Procursus)
-- [F121](https://github.com/F121Live) for helping test
-- [m1sta](https://github.com/m1stadev) for [pyimg4](https://github.com/m1stadev/PyIMG4)
-- [tihmstar](https://github.com/tihmstar) for [pzb](https://github.com/tihmstar/partialZipBrowser)/original [iBoot64Patcher](https://github.com/tihmstar/iBoot64Patcher)/original [liboffsetfinder64](https://github.com/tihmstar/liboffsetfinder64)/[img4tool](https://github.com/tihmstar/img4tool)
-- [xerub](https://github.com/xerub) for [img4lib](https://github.com/xerub/img4lib) and [restored_external](https://github.com/xerub/sshrd) in the ramdisk
-- [Cryptic](https://github.com/Cryptiiiic) for [iBoot64Patcher](https://github.com/Cryptiiiic/iBoot64Patcher) fork, and [liboffsetfinder64](https://github.com/Cryptiiiic/liboffsetfinder64) fork
-- [libimobiledevice](https://github.com/libimobiledevice) for several tools used in this project (irecovery, ideviceenterrecovery etc), and [nikias](https://github.com/nikias) for keeping it up to date
-- [Nick Chan](https://github.com/asdfugil) general help with patches.
-- [Sam Bingner](https://github.com/sbingner) for [Substitute](https://github.com/sbingner/substitute)
-- [Serena](https://github.com/SerenaKit) for helping with boot ramdisk.
-</p>
-
+<details><summary>Patheticlol</summary>README updates</details>
