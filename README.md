@@ -2,7 +2,7 @@
 	<source media="(prefers-color-scheme: light)" srcset="https://github.com/Patheticlol/iSUS/assets/83834491/af90f6b1-64c4-404e-920f-2bf89cbea60d">
 	<img align="left" height="120" src="https://github.com/Patheticlol/iSUS/assets/83834491/5faf3c6c-e5bd-4401-a952-837bc84d607d" style="float: left;"/>
 </picture>
-<h3 align="right">An iOS 12-16 work-in-progress, <br>semi-tethered Mobile Device Management bypasser that uses checkra1n and palera1n.</h3> 
+<h3 align="right">An iOS 12-16 work-in-progress, <br>untethered Mobile Device Management bypasser that uses checkra1n and palera1n.</h3> 
 
 <p align="right" >
   <strong><a href="https://github.com/Hackt1vator/iFix/blob/main/README.md">Usage (Tutorial)</a></strong>
