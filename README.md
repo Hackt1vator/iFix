@@ -16,7 +16,7 @@
 <div class="clear"></div>
 
 ## If you want a jailbreak, you should read [ios.cfw.guide](https://ios.cfw.guide).
-#### For devices that don't fully load Github Releases for some reason, use this link to install the DMG file: https://github.com/Hackt1vator/iFix/releases/download/v.1.0/iFix.dmg
+#### For devices that don't fully load Github Releases for some reason, use this link to install the ZIP file: https://github.com/Hackt1vator/iFix/releases/download/v.1.0/iFix.zip
 # Requirements
 - A checkm8 vulnerable iOS device on iOS 15.x or 16.x (`A8` - `A11`)
 - Palera1n Loader IPA file, which is available at https://nightly.link/palera1n/loader/workflows/build/main/palera1n.zip
