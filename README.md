@@ -15,6 +15,8 @@
 </p>
 <div class="clear"></div>
 
+<h3 align="center">This project is no longer updated. Please use hackt1vator Unlock instead: <strong><a href="https://hackt1vator.com">Hackt1vator Unlock</a></strong></h3>
+
 ## If you want a jailbreak, you should read [ios.cfw.guide](https://ios.cfw.guide).
 #### For devices that don't fully load Github Releases for some reason, use this link to install the ZIP file: https://github.com/Hackt1vator/iFix/releases/download/v.1.0/iFix.zip
 # Requirements
